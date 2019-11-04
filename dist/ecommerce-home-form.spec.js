@@ -10,7 +10,6 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const protractor_1 = require("protractor");
-// import { Calculator } from "./pages/calculator/calculator";
 const base_1 = require("./pages/base/base");
 const home_1 = require("./pages/home/home");
 describe("Fill Out ECommerce Form", function () {
@@ -39,6 +38,7 @@ describe("Fill Out ECommerce Form", function () {
         homeVerify.validateIcecreamChecked(form.checkboxIceCream);
         homeVerify.validateSuccessAlert("Success!");
         console.log("Done validate form data");
+        yield protractor_1.browser.sleep(1000);
     }));
     beforeAll(() => __awaiter(this, void 0, void 0, function* () {
         // setup data 
