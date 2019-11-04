@@ -62,4 +62,7 @@ typings/
 
 # typescript dist
 ./dist
+dist/
+
+# mac
 .DS_Store
