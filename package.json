@@ -1,0 +1,27 @@
+{
+  "name": "protractor-typescript-framework",
+  "version": "1.0.0",
+  "description": "This is an example of a protractor framework using typescript and cucumber",
+  "main": "index.js",
+  "scripts": {
+    "test": "protractor ./dist/conf.js",
+    "pretest": "tsc",
+    "protractor": "./node_modules/protractor/build/cli.js",
+    "webdriver-update": "./node_modules/.bin/webdriver-manager update"
+  },
+  "keywords": [
+    "protractor",
+    "typescript"
+  ],
+  "author": "suhail",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^12.12.5",
+    "protractor": "~5.4.2"
+  },
+  "devDependencies": {
+    "@types/jasmine": "~3.4.5",
+    "@types/jasminewd2": "~2.0.8",
+    "typescript": "~3.6.4"
+  }
+}
