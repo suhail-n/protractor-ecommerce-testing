@@ -1,14 +1,23 @@
 import { Config } from "protractor";
+// Load chai assertions
+import * as chai from "chai";
+import * as chaiAsPromised from "chai-as-promised";
 
 export let config: Config = {
-    // framework: 'jasmine',
+    onPrepare: function () {
+        // Load chai-as-promised support
+        chai.use(chaiAsPromised);
+        // Initialise should API (attaches as a property on Object)
+        chai.should();
+    },
     // set to "custom" instead of cucumber.
     framework: 'custom',
     frameworkPath: require.resolve('protractor-cucumber-framework'),
 
     // path relative to the current config file
     seleniumAddress: 'http://localhost:4444/wd/hub',
-    specs: ['ecommerce-home-form.spec.js'],
+    // execute feature files. This path works because features file is not ts and wont compile into dist
+    specs: ['../src/features/foo.feature'],
     // this will load the browser driver directly rather than having to start selenium server
     directConnect: true,
     capabilities: {
@@ -17,6 +26,9 @@ export let config: Config = {
         chromeOptions: {
             w3c: false,
         }
+    },
+    cucumberOpts: {
+        require: ["../dist/stepdefinitions/**/*.js"]
     },
 
     // jasmineNodeOpts: {

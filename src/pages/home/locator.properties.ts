@@ -51,4 +51,11 @@ export class HomeLocatorProperties {
         by.css,
         "Finds location of the submit button"
     );
+
+    public formFieldAlert = getLocatorProperties(
+        "Form field alerts",
+        "div.alert.alert-danger",
+        by.cssContainingText,
+        "Finds the location of a form field alert based on containing text"
+    )
 }

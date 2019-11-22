@@ -7,8 +7,20 @@ export class Act {
         await this.homeElements.name().sendKeys(name);
     }
 
+    public async clickName() {
+        await this.homeElements.name().click();
+    }
+
     public async enterEmail(email: string) {
         await this.homeElements.email().sendKeys(email);
+    }
+
+    public async clickEmail() {
+        await this.homeElements.email().click();
+    }
+
+    public async clickPassword() {
+        await this.homeElements.password().click();
     }
 
     public async clickCheckBoxLoveIcecream() {

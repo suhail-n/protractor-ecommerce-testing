@@ -56,4 +56,12 @@ export class HomeElements {
         const submit = this.properties.submitButton;
         return element(submit.locatorType(submit.locator));
     }
+    /**
+     * Get an alert banner based on containing text
+     * @param {string} alertMessage message as displayed on the UI
+     */
+    public formFieldAlertBanner(alertMessage: string): ElementFinder {
+        const fieldAlert = this.properties.formFieldAlert;
+        return element(fieldAlert.locatorType(fieldAlert.locator, alertMessage));
+    }
 }
