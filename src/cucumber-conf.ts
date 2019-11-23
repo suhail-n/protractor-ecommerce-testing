@@ -17,7 +17,7 @@ export let config: Config = {
     // path relative to the current config file
     seleniumAddress: 'http://localhost:4444/wd/hub',
     // execute feature files. This path works because features file is not ts and wont compile into dist
-    specs: ['../src/features/foo.feature'],
+    specs: ['../src/features/*.feature'],
     // this will load the browser driver directly rather than having to start selenium server
     directConnect: true,
     capabilities: {
@@ -28,7 +28,8 @@ export let config: Config = {
         }
     },
     cucumberOpts: {
-        require: ["../dist/stepdefinitions/**/*.js"]
+        require: ["../dist/stepdefinitions/**/*.js"],
+        tags: "@sanity or @smoke"
     },
 
     // jasmineNodeOpts: {

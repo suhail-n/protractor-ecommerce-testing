@@ -8,6 +8,7 @@
 #         And I click the password field
 #         Then Form field alert containing "Email is required" is displayed
 
+@smoke
 Feature: I am going to validate the ecommerce home page form
     # Outline is used with cucumber to parametrize data
     Scenario Outline: Enter Form Data with missing username and email
@@ -20,6 +21,5 @@ Feature: I am going to validate the ecommerce home page form
         # Examples uses column "alertMessage" and parametrizes that key with all rows below it
         # requires "Scenario Outline"
         Examples:
-            | alertMessage      |
-            | Name is required  |
-            | Email is required |
+            | alertMessage     |
+            | Name is required |
