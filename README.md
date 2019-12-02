@@ -9,6 +9,4 @@
 
 1. npm install
 2. npm run webdriver-update
-3. tsc
-4. npm run cucumbertest
-
+3. npm run test
