@@ -19,10 +19,10 @@
   "author": "suhail",
   "license": "ISC",
   "dependencies": {
-    "@types/node": "^12.12.5",
     "protractor": "~5.4.2"
   },
   "devDependencies": {
+    "@types/node": "^12.12.5",
     "@types/chai": "^4.2.5",
     "@types/chai-as-promised": "^7.1.2",
     "@types/cucumber": "~4.0.7",
